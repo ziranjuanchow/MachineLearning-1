@@ -13,10 +13,12 @@ import pydotplus # 绘制pdf图片
 if __name__ == '__main__':
     with open('lenses.txt') as fr:# 加载文件
         lenses = [inst.strip().split('\t') for inst in fr.readlines()]# 一行一行的输出文件
+        print(lenses)
 
     lenses_target = []
     for each in lenses:
         lenses_target.append(each[-1])#
+        print(each)
 
     # print(lenses)
 
@@ -32,11 +34,11 @@ if __name__ == '__main__':
     lenses_pd = pd.DataFrame(lenses_dict)
 
 
-    le = LabelEncoder()
+    le = LabelEncoder() # 序列化的作用
     for col in lenses_pd.columns: # lenses_pd中的数据转换为数字代表的值
         lenses_pd[col] = le.fit_transform(lenses_pd[col])
 
-    print (lenses_pd)
+    print(lenses_pd)
 
     clf = tree.DecisionTreeClassifier(max_depth=4)
     clf = clf.fit(lenses_pd.values.tolist(), lenses_target)
