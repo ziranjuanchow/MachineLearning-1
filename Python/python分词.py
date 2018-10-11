@@ -18,9 +18,9 @@ with open(filename,'r') as f:
 	word_dict = dict(tmp)
 fileobject = open(u'/saasdata/**/data/count_word.txt', 'w')
 for key,values in word_dict.items():
-	print key,values
+	print(key,values)
 	fileobject.writelines(str(key.encode('utf-8')) + ' '+str(values)+ '\n')
 # json_data =  json.dumps(word_dict)
 # json_data.encode('utf-8')
-print 'Sucessful saved!!!'
+print('Sucessful saved!!!')
 	

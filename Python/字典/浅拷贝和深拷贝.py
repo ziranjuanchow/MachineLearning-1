@@ -2,8 +2,7 @@
 __author__ = 'liudong'
 __date__ = '2018/8/15 下午8:47'
 
-# 导入深拷贝
-from copy import deepcopy
+
 
 # 浅拷贝的例子
 '''
@@ -17,4 +16,15 @@ y['username'] = 'ld'
 y['machines'].remove('bar')
 print(y)
 print(x)
+
+# 深拷贝的例子
+# 导入深拷贝
+from copy import deepcopy
+d = {}
+d['names'] = ['Alfred','Bertrand']
+c = d.copy()
+dc = deepcopy(d)
+d['names'].append('Clive')
+print(c)
+print(dc)
 

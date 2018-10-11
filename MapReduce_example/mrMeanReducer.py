@@ -17,7 +17,7 @@ for instance in mapperOut:
     # print(instance[0])
     # print(instance[1])
     # print(instance[2])
-    nj = 70.0
+    nj = float(instance[0])
     cumN += nj
     cumVal += nj*float(instance[1])
     cumSumSq += nj*float(instance[2])
