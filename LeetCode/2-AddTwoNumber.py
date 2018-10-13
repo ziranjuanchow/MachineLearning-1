@@ -10,7 +10,7 @@ Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
 Output: 7 -> 0 -> 8
 Explanation: 342 + 465 = 807.
 '''
-# Python的链表
+# Python的链表 这个解法的时间复杂度为O(n^2) 空间复杂度为O(M+N)
 class Solution:
     def addTwoNumber(self,l1,l2):
         """
@@ -29,10 +29,10 @@ class Solution:
         while l2.next:
             val2.append(l2.next.val)
             l2 = l2.next
-        num1 = ''.join([str(i) for i in val1[::-1]])
-        num2 = ''.join([str(i) for i in val2[::-1]])
-        tmp = str(int(num1) + int(num2))[::-1]
-        res = ListNode(int(tmp[0]))
+        num1 = ''.join([str(i) for i in val1[::-1]])# 342
+        num2 = ''.join([str(i) for i in val2[::-1]])# 465
+        tmp = str(int(num1) + int(num2))[::-1] # 807 —> 708
+        res = ListNode(int(tmp[0]))# 7
         run_res = res
         for i in range(1,len(tmp)):
             run_res.next = ListNode(int(tmp[i]))
