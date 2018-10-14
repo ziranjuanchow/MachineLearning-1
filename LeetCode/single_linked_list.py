@@ -2,8 +2,9 @@
 __author__ = 'liudong'
 __date__ = '2018/10/14 2:42 PM'
 '''
-实现单链表的结构
-insert、 delete 、 search  
+单链表
+ 1.Insert、 delete 、 search  of single-linked list
+ 2.int type in list node
 '''
 
 from typing import Optional
