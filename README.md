@@ -3,3 +3,5 @@
 
 ## Python的相关知识
 ### 容易遗忘的Python相关知识
+## LeetCode
+### 增加LeetCode的一些算法题目
