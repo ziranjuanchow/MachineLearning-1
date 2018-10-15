@@ -15,15 +15,14 @@ class Node:
         self._next = next
 
 class SinglyLinkedList:
+
     def __init__(self):
         self._head = None
-
 
     def find_by_value(self, value:int) -> Optional[Node]:
         p = self._head
         while p and p.data != value:
             p = p._next
-
         return p
 
     def find_by_index(self, index: int) -> Optional[Node]:
@@ -33,7 +32,6 @@ class SinglyLinkedList:
             p = p._next
             position += 1
         return p
-
 
     def insert_value_to_head(self, value: int):
         new_node = Node(value)
@@ -101,6 +99,12 @@ class SinglyLinkedList:
             prev._next = None
         self._head = fake_head._next
 
+    '''
+    __repr__方法是属于__str__的
+    输出对象的时候，输出的是__repr__中的数据
+    如果有__str__的时候，先输出__str__的数据
+    
+    '''
     def __repr__(self) -> str:
         nums = []
         current = self._head

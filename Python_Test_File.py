@@ -18,6 +18,7 @@ if __name__ == "__main__":
     name =  'Alice ll jjk kk ds hhn'
     last = name.split()
     print(last)
+
     girls = ['alice', 'bernice', 'clarice']
     boys =  ['chris','arnold','bob']
     letterGirls = {}
@@ -27,3 +28,8 @@ if __name__ == "__main__":
     print(b+'+'+g for b in boys for g in letterGirls[b[0]])
     exec("print('Hello !')")
     print([i for i in range(8)])
+    # zip
+    nums = [1,2,3]
+    chars = ['a','b','c','d']
+    for i , j in zip(nums,chars):
+        print(i,j)
