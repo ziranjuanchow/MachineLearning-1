@@ -41,8 +41,7 @@ class Solution:
         stack = []
         mapping = {")":"(", "}":"{","]":"["}
         for i in s:
-            if i in mapping: # 接下来将要加入的数据进行判断
-                # 将当前栈顶元素进行弹出 判断弹出的结果是否是在mapping中
+            if i in mapping:
                 top_element = stack.pop() if stack else "#"
                 if mapping[i] != top_element:
                     return False
