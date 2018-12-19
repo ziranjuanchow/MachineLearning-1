@@ -13,7 +13,7 @@ class Me(object):
 
 if __name__ == "__main__":
     me = Me('liudong','game')
-    me
+    
     print(me)
     name =  'Alice ll jjk kk ds hhn'
     last = name.split()

@@ -1,5 +1,4 @@
 # _*_ coding:utf-8 _*_
-import os
 
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
